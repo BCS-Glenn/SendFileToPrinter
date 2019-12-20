@@ -22,14 +22,6 @@ namespace SendFileToPrinter
             {
                 string fileName = dialog.FileName;
 
-                //var fByte = File.ReadAllBytes(fileName);
-                //var pq = LocalPrintServer.GetDefaultPrintQueue();
-
-                //using (var job = pq.AddJob())
-                //using (var stream = job.JobStream)
-                //{
-                //    stream.Write(fByte, 0, fByte.Length);
-                //}
 
                 var info = new ProcessStartInfo(fileName) { UseShellExecute = true, Verb = "print" };
                 var process = Process.Start(info);
